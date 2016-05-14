@@ -1,0 +1,35 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/* Styles */
+@import "../styles/_mixins.scss";
+@import "../styles/_variables.scss";
+@import "../styles/home.scss";
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  min-height:100%;
+  height:auto;
+  background-color: inherit;
+}
+
+.option_1 {
+  background-color: #3F51B5;
+  color: #E8EAF6;
+  svg {
+    fill: #E8EAF6;
+  }
+}
+
+.option_2 {
+  background-color: #00BCD4;
+  color: #E0F7FA;
+  svg {
+    fill: #E0F7FA;
+  }
+}
+
+
+
