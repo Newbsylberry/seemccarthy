@@ -1,0 +1,12 @@
+#project-list {
+  md-list-item .md-avatar, md-list-item .md-list-item-inner .md-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .md-list-item-text {
+    text-align: left;
+  }
+  a {
+    margin-top: 0;
+  }
+}

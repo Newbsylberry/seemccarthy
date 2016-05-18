@@ -8,7 +8,7 @@
  * Controller of the voluntrApp
  */
 angular.module('seemccarthyApp')
-  .controller('HomeCtrl', function ($scope,$rootScope) {
+  .controller('ProjectsCtrl', function ($scope,$rootScope) {
 
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -22,10 +22,6 @@ angular.module('seemccarthyApp')
         $rootScope.option_two = true;
       }
     }
-
-
-
-
 
 
   });

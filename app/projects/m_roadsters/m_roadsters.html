@@ -1,0 +1,42 @@
+<div class="main-content" layout>
+  <div flex="20"></div>
+  <div flex="60" class="center-content">
+    <div class="content-header">
+      <h1>
+        M Roadsters
+      </h1>
+    </div>
+    <m-roadster-scatter-plot roadsters="roadsters" style="position: relative;top: 100px;"></m-roadster-scatter-plot>
+    <md-list id="m-roadsters" class="content-list">
+      <div id="roadster-list-sort" layout>
+        <div flex="50" id="left-box">
+            <label>Sort By:</label>
+          <select name="singleSelect" ng-model="order_by">
+            <option value="-mileage">High Mileage</option>
+            <option value="mileage">Low Mileage</option>
+            <option value="-price">High Price</option>
+            <option value="price">Low Price</option>
+            <option value="-quality_rating">High Cost Per Mile</option>
+            <option value="quality_rating">Low Cost Per Mile</option>
+          </select>
+        </div>
+        <div flex="50" id="right-box">
+          <strong id="cost-per-mile">Cost Per Mile</strong>
+        </div>
+      </div>
+      <md-list-item class="md-2-line" ng-repeat="roadster in roadsters | orderBy:order_by | limitTo:limit_number" ng-show="roadster.mileage && roadster.price">
+        <img ng-src="{{roadster.photo}}" class="md-avatar" alt="{{todos[0].who}}" />
+        <div class="md-list-item-text">
+          <h2><a href="{{roadster.listing_url}}" target="_blank">{{roadster.year}}</a></h2>
+          <p id="desktop-description">This roadster has {{roadster.mileage | number}} miles and costs ${{roadster.price | number}}</p>
+          <p id="mobile-description">This roadster has {{roadster.mileage | number}} miles and costs ${{roadster.price | number}} which means it costs ${{roadster.quality_rating | number:2}} per mile.</p>
+        </div>
+        <h2 class="md-secondary roadster-deal-rating">${{roadster.quality_rating | number:2}}</h2>
+      </md-list-item>
+    </md-list>
+    <a href="javascript:;" ng-click="limit_number = null">Show All Results</a>
+  </div>
+
+  <div flex="20">
+  </div>
+</div>

@@ -6,28 +6,148 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 /* Styles */
 @import "../styles/_mixins.scss";
 @import "../styles/_variables.scss";
-@import "../styles/home.scss";
+@import "../static_pages/home.scss";
+@import "../projects/projects.scss";
+@import "../projects/m_roadsters/m_roadsters.scss";
 
 html, body {
   font-family: 'Roboto', sans-serif;
   min-height:100%;
   height:auto;
   background-color: inherit;
-}
-
-.option_1 {
-  background-color: #3F51B5;
-  color: #E8EAF6;
-  svg {
-    fill: #E8EAF6;
+  .option_1 {
+    background-color: #3F51B5;
+    color: #E8EAF6;
+    h1 {
+      color: #00E676;
+    }
+    a {
+      color: #00E676;
+    }
+    svg {
+      fill: #00E676;
+    }
+  }
+  .option_2 {
+    background-color: #00BCD4;
+    color: #E0F7FA;
+    h1 {
+      color: #FFFF00;
+    }
+    a {
+      color: #FFFF00;
+    }
+    svg {
+      fill: #FFFF00;
+    }
   }
 }
 
-.option_2 {
-  background-color: #00BCD4;
-  color: #E0F7FA;
-  svg {
-    fill: #E0F7FA;
+.center-content {
+  .content-header {
+  h1 {
+    text-align: center;
+    margin: -54px 0;
+    @include breakpoint($tablet) {
+      margin-top: 8px;
+      font-size: 24pt;
+    }
+  }
+  p {
+    margin: 60px 0;
+    text-align: center;
+    font-size: 14pt;
+  }
+  }
+  .content-list {
+    margin-top: 58px;
+  }
+}
+
+header {
+  padding: 0px 36px;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 28px;
+    margin-right: 16px;
+    border-radius: 50%;
+    height: 226px;
+    width: 226px;
+    @include breakpoint($tablet) {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      height: 150px;
+      width: 150px;
+    }
+  }
+  .header-text {
+    margin-top: 18px;
+    display: inline-block;
+    width: 310px;
+    text-align: center;
+    vertical-align: middle;
+    @include breakpoint($tablet) {
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 0px;
+      font-size: 44px;
+      @include breakpoint($tablet) {
+        margin-top: 0;
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 14pt;
+      margin: 0 0 4px
+    }
+  }
+  ul {
+    li {
+      display: inline;
+      list-style: none;
+      a {
+        color: inherit;
+      }
+    }
+  }
+  .navigation {
+    float: right;
+    margin-top: 100px;
+    font-size: 14pt;
+    @include breakpoint($tablet) {
+      display: none;
+    }
+    a {
+      margin-right: 12px;
+    }
+  }
+  .social-media {
+    font-size: 28pt;
+    padding-left: 0px;
+    width: 226px;
+    text-align: center;
+    @include breakpoint($tablet) {
+      width: initial;
+    }
+  }
+  .mobile-navigation {
+    font-size: 16pt;
+    padding-left: 0;
+    text-align: center;
+    display: block;
+    margin-top: 16px;
+    li {
+      margin-right: 9px;
+      margin-left: 9px;
+    }
+    @media screen and (min-width: 850px) {
+      display: none;
+    }
   }
 }
 

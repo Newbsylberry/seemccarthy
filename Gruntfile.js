@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/static_pages/**/*.js','<%= yeoman.app %>/scripts/**/*.js'],
+        files: ['<%= yeoman.app %>/static_pages/**/*.js','<%= yeoman.app %>/projects/**/*.js','<%= yeoman.app %>/scripts/**/*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       compass: {
-        files: ['<%= yeoman.app %>/static_pages/**/*.{scss,sass}','<%= yeoman.app %>/styles/**/*.{scss,sass}'],
+        files: ['<%= yeoman.app %>/static_pages/**/*.{scss,sass}','<%= yeoman.app %>/projects/**/*.{scss,sass}','<%= yeoman.app %>/styles/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer:server']
       },
       gruntfile: {
@@ -357,7 +357,7 @@ module.exports = function (grunt) {
           usemin: 'scripts/scripts.js'
         },
         cwd: '<%= yeoman.app %>',
-        src: 'static_pages/{,*/}*.html',
+        src: ['static_pages/{,*/}*.html','projects/{,*/}*.html'],
         dest: '.tmp/templateCache.js'
       }
     },
@@ -395,7 +395,8 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'cars_i_want.json'
           ]
         },
           {

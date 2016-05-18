@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
   </head>
   <body ng-app="seemccarthyApp" ng-class="{option_1: option_one,option_2: option_two}">
     <!--[if lte IE 8]>
@@ -23,6 +24,30 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <header>
+      <ul  class="mobile-navigation">
+        <li><a ui-sref="/">Home</a></li>
+        <li><a href="images/ChrisMcCarthyResume.pdf" target="_blank">Resume</a></li>
+        <li><a ui-sref="projects">Projects</a></li>
+      </ul>
+      <img src="images/picture 1.jpeg">
+      <div class="header-text">
+        <h1>Chris McCarthy</h1>
+        <p>has an insatiable appetite for breakfast burritos.</p>
+      </div>
+      <ul class="navigation">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a href="images/ChrisMcCarthyResume.pdf" target="_blank">Resume</a></li>
+        <li><a ui-sref="projects">Projects</a></li>
+        <!-- <li><a href="">Blog</a></li>-->
+      </ul>
+      <ul class="social-media">
+        <li><a href="mailto:chris.s.mccarthy@gmail.com?Subject=I'm%20Interested%20In%20Speaking%20About%20Working%20Together" class="ion-email"></a></li>
+        <li><a href="https://www.linkedin.com/in/chrismccarthyceo" target="_blank" class="ion-social-linkedin"></a></li>
+        <li><a href="https://github.com/Newbsylberry" target="_blank" class="ion-social-github"></a></li>
+        <li><a href="https://twitter.com/datascienchris" target="_blank" class="ion-social-twitter"></a></li>
+      </ul>
+    </header>
     <div ui-view></div>
 
 
@@ -58,7 +83,9 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="static_pages/home.js"></script>
-        <script src="static_pages/syracuse_weather/syracuse_weather.js"></script>
+        <script src="projects/projects.js"></script>
+        <script src="projects/m_roadsters/m_roadsters.js"></script>
+        <script src="projects/m_roadsters/scatter_plot_directive.js"></script>
         <!-- endbuild -->
 </body>
 </html>

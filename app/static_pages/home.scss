@@ -1,0 +1,41 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.main-content{
+  .left-text {
+    text-align: center;
+    position: relative;
+    top: 34px;
+  }
+  svg#Layer_2 {
+    height: 286px;
+    margin: -80px auto;
+    display: block;
+    @include breakpoint($tablet) {
+      margin-right: auto;
+      margin-left: auto;
+      height: 134px;
+      margin-top: 0;
+    }
+  }
+  .right-text {
+    text-align: center;
+    position: relative;
+    bottom: 28px;
+    @include breakpoint($tablet) {
+      font-size: 8pt;
+      bottom: 0px;
+    }
+  }
+  .timeline-text {
+    @include breakpoint($tablet) {
+      font-size: 10pt;
+      position: relative;
+      top: 0px;
+    }
+  }
+}
+.scroll-down {
+  width: 100vw;
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+
+  .tooltip {
+    border-radius: 12%;
+    padding: 6px;
+    background-color: grey;
+  }
+md-list#m-roadsters.content-list {
+  margin-top: 200px;
+  #roadster-list-sort {
+    #left-box {
+
+    }
+    #right-box {
+    text-align: right;
+    }
+  }
+  #cost-per-mile {
+    @include breakpoint($tablet) {
+      display: none;
+    }
+  }
+  a {
+    text-align: center;
+    text-decoration: underline;
+  }
+  md-list-item .md-avatar, md-list-item .md-list-item-inner .md-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .roadster-deal-rating {
+    @include breakpoint($tablet) {
+      display: none;
+    }
+  }
+  #desktop-description {
+    @include breakpoint($tablet) {
+      display: none;
+    }
+  }
+  #mobile-description {
+    @media screen and (min-width: 850px) {
+      display: none;
+    }
+  }
+}
